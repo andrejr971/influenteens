@@ -2,6 +2,61 @@ import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
+    @font-face {
+      font-family: 'Mabry Pro';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src:
+        local('MabryPro Black'),
+        local('MabryPro-Black'),
+        url('/fonts/MabryPro-Black.ttf') format('ttf');
+    }
+
+    @font-face {
+      font-family: 'Mabry Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src:
+        local('MabryPro Medium'),
+        local('MabryPro-Medium'),
+        url('/fonts/MabryPro-Medium.ttf') format('ttf');
+    }
+
+    @font-face {
+      font-family: 'Mabry Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src:
+        local('MabryPro Regular'),
+        local('MabryPro-Regular'),
+        url('/fonts/MabryPro-Regular.ttf') format('ttf');
+    }
+
+    @font-face {
+      font-family: 'Mabry Pro';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src:
+        local('MabryPro Light'),
+        local('MabryPro-Light'),
+        url('/fonts/MabryPro-Light.ttf') format('ttf');
+    }
+
+    @font-face {
+      font-family: 'Network Free Version';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src:
+        local('Network Free Version'),
+        local('NetworkFreeVersion'),
+        url('/fonts/NetworkFreeVersion.ttf') format('ttf');
+    }
+
     * {
       margin: 0;
       padding: 0;
