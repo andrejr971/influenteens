@@ -36,14 +36,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <head>
-        <link
-          rel="preload"
-          href="./fonts/NetworkFreeVersion.woff2"
-          as="font"
-          type="font/woff2"
-        />
-      </head>
       <body>
         <AppProvider>{children}</AppProvider>
       </body>
