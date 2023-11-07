@@ -33,7 +33,7 @@ export const theme = {
   fonsts: {
     family: {
       mabry: "'Mabry Pro', sans-serif",
-      network: "'Network Free Version', sans-serif",
+      network: "'Network Free', mono",
     },
     titles: {
       xxlarge: "bold 7.2rem/90% 'Mabry Pro', sans-serif",
