@@ -3,8 +3,18 @@
 import Image from 'next/image'
 import { Article, Background, Container, Main } from './styles'
 import { SubscriptionProps } from './types'
+import { useLayoutEffect, useState } from 'react'
+import { api } from '@/services'
 
-export function Subscriptions({ total }: SubscriptionProps) {
+export function Subscriptions() {
+  const [total, setTotal] = useState(0)
+
+  useLayoutEffect(() => {
+    api.get('/api/subscriptions').then(({ data }) => {
+      setTotal(data)
+    })
+  }, [])
+
   return (
     <Container>
       <Background>

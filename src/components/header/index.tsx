@@ -25,11 +25,7 @@ export function Header() {
         <MediaMatch greaterThan="medium">
           <GroupButtons>
             <Modal
-              buttonTrigger={
-                <Button variant="secondary" color="white">
-                  Como chegar
-                </Button>
-              }
+              buttonTrigger={<Button variant="secondary">Como chegar</Button>}
             />
             <ModalConfirmation
               buttonTrigger={<Button>Confirmar presença</Button>}
@@ -41,7 +37,7 @@ export function Header() {
           <GroupButtons>
             <Modal
               buttonTrigger={
-                <Button size="small" variant="secondary" color="white">
+                <Button size="small" variant="secondary">
                   <MapPin size={24} />
                 </Button>
               }

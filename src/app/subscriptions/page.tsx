@@ -1,10 +1,7 @@
-import { prisma } from '@/services'
 import { Subscriptions } from '@/templates/subscriptions'
 
 export default async function Page() {
-  const total = await prisma.subscriptions.count()
-
-  return <Subscriptions total={total} />
+  return <Subscriptions />
 }
 
 export const revalidate = 120
