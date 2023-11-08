@@ -194,7 +194,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
       background: ${theme.colors.background};
       color: ${theme.colors.black.default};
-      font: ${theme.fonsts.texts.small};
+      font: ${theme.fonts.texts.small};
 
       overflow-x: hidden;
 

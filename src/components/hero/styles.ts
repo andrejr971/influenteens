@@ -117,7 +117,7 @@ export const Choosen = styled.div`
 
     span {
       margin-top: 4rem;
-      font-family: ${theme.fonsts.family.network};
+      font-family: ${theme.fonts.family.network};
       font-weight: 300;
       font-size: 36rem;
       opacity: 0.1;

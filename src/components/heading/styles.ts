@@ -11,17 +11,18 @@ export const Container = styled.div<ContainerProps>`
 
     span {
       position: absolute;
-      z-index: -1;
+      z-index: 0;
 
-      font-family: ${theme.fonsts.family.mabry};
+      font-family: ${theme.fonts.family.mabry};
       color: ${theme.colors.orange.default};
-      font-size: ${theme.fonsts.sizes[sizes]};
+      font-size: ${theme.fonts.sizes[sizes]};
     }
 
     strong {
-      font-family: ${theme.fonsts.family.network};
+      z-index: 1;
+      font-family: ${theme.fonts.family.network};
       color: ${theme.colors.orange.darken};
-      font-size: ${theme.fonsts.sizes[sizes]};
+      font-size: ${theme.fonts.sizes[sizes]};
       font-weight: 300;
     }
   `}

@@ -1,7 +1,6 @@
 'use client'
-
 import styled, { css } from 'styled-components'
-import { media } from '..'
+import { media } from '../media-match'
 
 export const Container = styled.header`
   ${({ theme }) => css`
@@ -10,9 +9,8 @@ export const Container = styled.header`
     border-bottom: 1px solid ${theme.colors.gray[200]};
 
     position: fixed;
+    top: 0px;
     z-index: 999;
-    top: 0;
-    left: 0;
 
     background: linear-gradient(
       90deg,

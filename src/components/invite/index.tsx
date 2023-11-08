@@ -1,5 +1,17 @@
+'use client'
+import dynamic from 'next/dynamic'
 import { Button, Heading } from '..'
 import { Container, Content, DivLeft, DivRight, GroupButtons } from './styles'
+
+const Modal = dynamic(async () => (await import('../modal')).Modal, {
+  ssr: false,
+})
+const ModalConfirmation = dynamic(
+  async () => (await import('../modal-confimation')).ModalConfirmation,
+  {
+    ssr: false,
+  }
+)
 
 export function Invite() {
   return (
@@ -22,8 +34,12 @@ export function Invite() {
       </Content>
 
       <GroupButtons>
-        <Button variant="secondary">Compartilhar</Button>
-        <Button>Como chegar</Button>
+        <Modal
+          buttonTrigger={<Button variant="secondary">Como chegar</Button>}
+        />
+        <ModalConfirmation
+          buttonTrigger={<Button>Confirmar presença</Button>}
+        />
       </GroupButtons>
     </Container>
   )

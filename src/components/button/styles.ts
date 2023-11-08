@@ -25,7 +25,7 @@ const containerModifiers = {
   `,
   small: (theme: DefaultTheme) => css`
     border-radius: 0.4rem;
-    font: ${theme.fonsts.texts.small};
+    font: ${theme.fonts.texts.small};
     padding: 0.8rem;
     width: fit-content;
   `,
@@ -43,7 +43,7 @@ const containerModifiers = {
 }
 
 export const Container = styled.button<ContainerProps>`
-  ${({ theme, variant, size }) => css`
+  ${({ theme, variant, size, color }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@ export const Container = styled.button<ContainerProps>`
     border-radius: 12px;
 
     border: 0;
-    font: ${theme.fonsts.titles.xsmall};
+    font: ${theme.fonts.titles.xsmall};
     font-weight: 500;
 
     svg {
@@ -62,5 +62,11 @@ export const Container = styled.button<ContainerProps>`
 
     ${containerModifiers[variant](theme)};
     ${containerModifiers[size](theme)};
+
+    ${color === 'white' &&
+    variant === 'secondary' &&
+    css`
+      color: ${theme.colors.white.default};
+    `}
   `}
 `

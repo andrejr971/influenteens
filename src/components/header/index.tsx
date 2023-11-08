@@ -1,8 +1,20 @@
 'use client'
-import { MapPin, ShareNetwork } from '@phosphor-icons/react'
+import dynamic from 'next/dynamic'
+import { Check, MapPin, ShareNetwork } from '@phosphor-icons/react'
 import { Button, LogoInfluenTeens, MediaMatch } from '..'
 
 import { Container, Content, GroupButtons } from './styles'
+
+const Modal = dynamic(async () => (await import('../modal')).Modal, {
+  ssr: false,
+})
+
+const ModalConfirmation = dynamic(
+  async () => (await import('../modal-confimation')).ModalConfirmation,
+  {
+    ssr: false,
+  }
+)
 
 export function Header() {
   return (
@@ -12,19 +24,35 @@ export function Header() {
 
         <MediaMatch greaterThan="medium">
           <GroupButtons>
-            <Button variant="secondary">Compartilhar</Button>
-            <Button>Como chegar</Button>
+            <Modal
+              buttonTrigger={
+                <Button variant="secondary" color="white">
+                  Como chegar
+                </Button>
+              }
+            />
+            <ModalConfirmation
+              buttonTrigger={<Button>Confirmar presença</Button>}
+            />
           </GroupButtons>
         </MediaMatch>
 
         <MediaMatch lessThan="medium">
           <GroupButtons>
-            <Button variant="secondary" size="small">
-              <ShareNetwork size={24} />
-            </Button>
-            <Button size="small">
-              <MapPin size={24} />
-            </Button>
+            <Modal
+              buttonTrigger={
+                <Button size="small" variant="secondary" color="white">
+                  <MapPin size={24} />
+                </Button>
+              }
+            />
+            <ModalConfirmation
+              buttonTrigger={
+                <Button size="small">
+                  <Check size={24} />
+                </Button>
+              }
+            />
           </GroupButtons>
         </MediaMatch>
       </Content>

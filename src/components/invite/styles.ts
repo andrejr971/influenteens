@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { media } from '..'
 
 export const Container = styled.section`
-  margin: 20rem auto;
+  margin: 0 auto;
   max-width: 80rem;
 
   display: flex;
@@ -35,7 +35,7 @@ export const DivLeft = styled.div`
 
     span {
       position: absolute;
-      font: ${theme.fonsts.titles.large};
+      font: ${theme.fonts.titles.large};
 
       &.top {
         top: 0;
@@ -49,7 +49,7 @@ export const DivLeft = styled.div`
     }
 
     strong {
-      font-family: ${theme.fonsts.family.network};
+      font-family: ${theme.fonts.family.network};
       color: ${theme.colors.orange.default};
       font-size: 26rem;
       font-weight: 400;
@@ -65,7 +65,7 @@ export const DivRight = styled.div`
     gap: 4rem;
 
     p {
-      font: ${theme.fonsts.titles.large};
+      font: ${theme.fonts.titles.large};
     }
 
     div {

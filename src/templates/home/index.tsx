@@ -1,8 +1,23 @@
-import { About, CompositionsCircle, Header, Hero, Invite } from '@/components'
+import {
+  About,
+  CompositionsCircle,
+  Footer,
+  Header,
+  Hero,
+  Invite,
+  Lecturers,
+} from '@/components'
 import { Container } from './style'
 import { Gallery } from '@/components/gallery'
 
 export function Home() {
+  // useEffect(() => {
+  //   const data = new FormData()
+  //   data.append('test', 'a')
+
+  //   api.post('/api/confirmation', data).then(({ data }) => console.log(data))
+  // }, [])
+
   return (
     <Container>
       <Header />
@@ -18,7 +33,6 @@ export function Home() {
           zIndex: '-1',
         }}
       />
-
       <CompositionsCircle
         color="default"
         style={{
@@ -30,8 +44,10 @@ export function Home() {
       />
 
       <Gallery />
-
       <Invite />
+      <Lecturers />
+
+      <Footer />
     </Container>
   )
 }

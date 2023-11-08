@@ -1,6 +1,18 @@
+'use client'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { Choosen, Container, Content, Dates, GroupButtons } from './styles'
-import { Button, CompositionsCircle, Heading } from '..'
+import { Button, Heading } from '..'
+
+const Modal = dynamic(async () => (await import('../modal')).Modal, {
+  ssr: false,
+})
+const ModalConfirmation = dynamic(
+  async () => (await import('../modal-confimation')).ModalConfirmation,
+  {
+    ssr: false,
+  }
+)
 
 export function Hero() {
   return (
@@ -30,8 +42,12 @@ export function Hero() {
         </div>
 
         <GroupButtons>
-          <Button variant="secondary">Compartilhar</Button>
-          <Button>Como chegar</Button>
+          <Modal
+            buttonTrigger={<Button variant="secondary">Como chegar</Button>}
+          />
+          <ModalConfirmation
+            buttonTrigger={<Button>Confirmar presença</Button>}
+          />
         </GroupButtons>
 
         <Choosen>

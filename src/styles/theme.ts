@@ -30,7 +30,7 @@ export const theme = {
     green: '#4ed6aa',
     blue: '#5593e8',
   },
-  fonsts: {
+  fonts: {
     family: {
       mabry: "'Mabry Pro', sans-serif",
       network: "'Network Free', sans-serif",
