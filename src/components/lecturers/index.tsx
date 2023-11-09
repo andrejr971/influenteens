@@ -7,7 +7,7 @@ export const lecturers = [
     office: 'Pastor',
     name: 'Lucas',
     social: {
-      instagram: null,
+      instagram: 'pr_lucas_araujo',
       facebook: null,
       twitter: null,
     },
@@ -18,7 +18,7 @@ export const lecturers = [
   {
     id: 2,
     office: 'Evangelista',
-    name: 'Bruno Crispim',
+    name: 'Bruno Soares',
     social: {
       instagram: 'brunosoaresmsg',
       facebook: 'brunosoaresmsg',

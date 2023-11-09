@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic'
 import { Button, Heading } from '..'
 import { Container, Content, DivLeft, DivRight, GroupButtons } from './styles'
+import { InviteProps } from './types'
 
 const Modal = dynamic(async () => (await import('../modal')).Modal, {
   ssr: false,
@@ -13,7 +14,10 @@ const ModalConfirmation = dynamic(
   }
 )
 
-export function Invite() {
+export function Invite({
+  withDescription = true,
+  withLocation = false,
+}: InviteProps) {
   return (
     <Container>
       <Content>
@@ -33,10 +37,27 @@ export function Invite() {
         </DivRight>
       </Content>
 
+      {withDescription && (
+        <p>
+          <strong>
+            Reserve seu lugar agora e vamos fazer deste congresso algo realmente
+            especial!
+          </strong>
+          <br />
+          A inscrição é simples. Basta clicar no botão abaixo para preencher o
+          formulário e garantir seu ingresso para duas noites que pode mudar sua
+          vida. <br /> Se você tiver alguma dúvida, não hesite em entrar em
+          contato conosco. <br /> Mal posso esperar para nos encontrarmos e
+          compartilhar esse momento.
+        </p>
+      )}
+
       <GroupButtons>
-        <Modal
-          buttonTrigger={<Button variant="secondary">Como chegar</Button>}
-        />
+        {withLocation && (
+          <Modal
+            buttonTrigger={<Button variant="secondary">Como chegar</Button>}
+          />
+        )}
         <ModalConfirmation
           buttonTrigger={<Button>Confirmar presença</Button>}
         />

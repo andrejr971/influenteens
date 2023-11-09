@@ -1,4 +1,6 @@
+'use client'
 import Image from 'next/image'
+
 import { Container } from './styles'
 import { LogotypeInfluenteens } from '..'
 
@@ -17,12 +19,11 @@ export function About() {
       </div>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur. Mattis adipiscing leo nunc at
-        quam eleifend. In maecenas eu enim at mattis magna dolor vitae cursus.
-        Sit imperdiet ornare placerat mattis. Vulputate augue malesuada sed sed
-        dolor sed auctor mauris. Porttitor natoque at ac tempor tristique amet
-        cum mauris id. Elit lacinia et morbi libero amet vel nisl blandit. Risus
-        massa amet elit sed sapien.
+        E aí, galera! Estamos empolgados por fazer parte deste Influenteens. Vai
+        ser uma experiência incrível! Estamos com grandes expectativas no que o
+        Senhor vai fazer em nós e através de nós. Se você quer fortalecer sua
+        conexão com Deus e comungar com seus irmãos, aqui é o lugar perfeito!
+        Junte-se a nós e a muitos outros jovens nesse congresso. <br />
       </p>
     </Container>
   )

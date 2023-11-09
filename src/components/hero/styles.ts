@@ -37,6 +37,8 @@ export const Content = styled.article`
     max-width: 80rem;
     text-align: center;
 
+    color: ${({ theme }) => theme.colors.white.default};
+
     &:first-child {
       padding: 1.6rem;
       margin-top: 4rem;

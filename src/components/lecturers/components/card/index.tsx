@@ -35,7 +35,7 @@ export function Card({ data }: CardProps) {
             <Social>
               {data.social.instagram && (
                 <a
-                  href={`www.instagram.com/${data.social.instagram}`}
+                  href={`https://www.instagram.com/${data.social.instagram}`}
                   target="_blank"
                 >
                   <InstagramLogo />
@@ -43,7 +43,7 @@ export function Card({ data }: CardProps) {
               )}
               {data.social.facebook && (
                 <a
-                  href={`www.facebook.com/${data.social.facebook}`}
+                  href={`https://www.facebook.com/${data.social.facebook}`}
                   target="_blank"
                 >
                   <FacebookLogo />
@@ -51,7 +51,7 @@ export function Card({ data }: CardProps) {
               )}
               {data.social.twitter && (
                 <a
-                  href={`www.twitter.com/${data.social.twitter}`}
+                  href={`https://www.twitter.com/${data.social.twitter}`}
                   target="_blank"
                 >
                   <TwitchLogo />

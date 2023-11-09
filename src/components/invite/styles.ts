@@ -11,6 +11,10 @@ export const Container = styled.section`
   align-items: center;
   gap: 4rem;
   height: 100%;
+
+  p {
+    text-align: center;
+  }
 `
 
 export const Content = styled.div`
